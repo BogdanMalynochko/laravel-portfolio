@@ -1,0 +1,21 @@
+.btn {
+    background: linear-gradient(to right, #7A87FB, #FFD49C);;
+
+    @apply block w-max text-lg border-yellow border-2 px-5 py-3 font-medium rounded-3xl duration-100;
+
+    &:hover {
+        @apply duration-100 border-blue;
+
+        background: linear-gradient(to left, #7A87FB, #FFD49C);
+    }
+
+    &.admin-btn {
+        @apply rounded-full p-4;
+    }
+
+    &.transparent {
+        background: transparent;
+
+        @apply text-white font-normal;
+    }
+}

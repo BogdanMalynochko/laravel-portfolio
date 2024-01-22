@@ -1,0 +1,41 @@
+body {
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-4xl;
+    }
+
+    h3 {
+        @apply text-2xl;
+    }
+
+    h1, h2, h3 {
+        @apply text-white leading-[48px];
+
+        &.center {
+            @apply text-center;
+        }
+
+        &.bold {
+            @apply font-bold;
+        }
+    }
+
+    p {
+        @apply text-white leading-[22px];
+
+        &.center {
+            @apply text-center;
+        }
+    }
+
+    .heading-wrapper {
+        @apply flex items-center gap-7 pb-20;
+
+        &.center {
+            @apply justify-center;
+        }
+    }
+}

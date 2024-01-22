@@ -1,0 +1,51 @@
+* {
+    @apply font-main;
+}
+
+body {
+    @apply bg-portfolio-black;
+}
+
+.blue-border {
+    @apply border-blue border-2;
+}
+
+.gradient {
+    background: linear-gradient(to right, #7A87FB, #FFD49C);
+}
+
+.banner {
+    .container {
+        @apply bg-no-repeat max-w-[1092px];
+
+        background-image: url('../../../public/images/banner-bg.svg');    
+    }
+}
+
+.project-number-circle {
+    @apply border-grey_second border-[1px] w-max border-b-white text-2xl text-white rounded-full px-5 py-3;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    span {
+        @apply block;
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.project-link {
+    @apply hover:underline;
+}
+
+.skills-list {
+    li {
+    @apply text-4xl list-none pb-10;
+
+        &.white {
+            @apply text-white;
+        }
+    }
+}
