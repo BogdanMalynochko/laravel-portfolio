@@ -24,17 +24,28 @@
                 <x-menu-item>About</x-menu-item>
                 <x-menu-item>Projects</x-menu-item>
                 <x-menu-item>Contact me</x-menu-item>
+                @auth
+                    <form id="logout-form" method="POST" action="/logout">
+                        @csrf
+                        <button class="text-white">Log Out</button>
+                    </form>
+                @else
+                    <x-menu-item href="/login/">Login</x-menu-item>
+                    <x-menu-item href="/register/">Register</x-menu-item>
+                @endauth
             </ul>
         </div>
         <div class="flex gap-1">
             <x-button>Hire Me</x-button>
-            <x-button class="admin-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <rect width="20" height="20" stroke="url(#paint0_linear_1_1548)"/>
-                    <circle cx="9.99984" cy="4.99996" r="3.33333" stroke="black" stroke-width="1.5"/>
-                    <ellipse cx="9.99984" cy="14.1667" rx="5.83333" ry="3.33333" stroke="black" stroke-width="1.5"/>
-                </svg>
-            </x-button>
+            @auth
+                <x-button class="admin-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <rect width="20" height="20" stroke="url(#paint0_linear_1_1548)"/>
+                        <circle cx="9.99984" cy="4.99996" r="3.33333" stroke="black" stroke-width="1.5"/>
+                        <ellipse cx="9.99984" cy="14.1667" rx="5.83333" ry="3.33333" stroke="black" stroke-width="1.5"/>
+                    </svg>
+                </x-button>
+            @endauth
         </div>
     </div>
 </div>
