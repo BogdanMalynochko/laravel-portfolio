@@ -49,3 +49,7 @@ body {
         }
     }
 }
+
+.admin-options {
+    @apply absolute py-3 px-6 top-12 right-0;
+}

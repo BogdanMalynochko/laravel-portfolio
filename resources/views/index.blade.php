@@ -43,7 +43,7 @@
                 <div class="pt-10 flex flex-col gap-10">
                     @foreach ($projects as $index => $project)
                         @if ($index < 3)
-                            <x-project-card :project="$project"/>
+                            <x-project-card :index="$index" :project="$project"/>
                         @endif
                     @endforeach
                 </div>

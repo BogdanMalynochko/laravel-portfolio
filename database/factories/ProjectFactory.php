@@ -20,6 +20,7 @@ class ProjectFactory extends Factory
             'name' => fake()->word(),
             'description' => fake()->paragraph(5),
             'link' => fake()->url(),
+            'slug' => fake()->slug(),
         ];
     }
 }

@@ -27,5 +27,9 @@
 
             background: linear-gradient(to left, #7A87FB, #FFD49C);
         }
+
+        &.admin {
+            @apply text-sm py-2 px-4;
+        }
     }
 }
