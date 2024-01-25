@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\SKill;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Projects>
@@ -20,7 +21,6 @@ class ProjectFactory extends Factory
             'name' => fake()->word(),
             'description' => fake()->paragraph(5),
             'link' => fake()->url(),
-            'slug' => fake()->slug(),
         ];
     }
 }

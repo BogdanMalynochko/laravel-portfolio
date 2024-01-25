@@ -10,7 +10,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    // protected $fillable = ['name', 'description', 'link', 'image'];
+    protected $fillable = ['name', 'description', 'link', 'image'];
 
     public function skills() // skill_id
     {

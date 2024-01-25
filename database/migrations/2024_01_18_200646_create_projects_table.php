@@ -9,6 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
     public function up(): void
     {
         Schema::create('projects', function (Blueprint $table) {
@@ -17,7 +18,6 @@ return new class extends Migration
             $table->text('description');
             $table->string('image')->nullable();
             $table->string('link');
-            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

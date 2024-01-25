@@ -1,7 +1,6 @@
 <x-layout>
     <div class="container">
-        <h1 class="mb-10 center">Register!</h1>
-
+        <x-heading class="center">Register</x-heading>
         <form class="max-w-3xl mx-auto" action="/register" method="POST">
             @csrf
 

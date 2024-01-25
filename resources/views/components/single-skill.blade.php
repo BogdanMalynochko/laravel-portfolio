@@ -1,6 +1,6 @@
 
 <h3>{{ $slot }}</h3>
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+<svg class="pulse" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
     <g clip-path="url(#clip0_0_75)">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8572 0H11.1429V9.93067L4.12081 2.90862L2.90863 4.12081L9.93067 11.1429H0V12.8572H9.93066L2.90863 19.8792L4.12081 21.0913L11.1429 14.0693V24H12.8572V14.0693L19.8792 21.0913L21.0913 19.8792L14.0693 12.8572H24V11.1429H14.0693L21.0913 4.1208L19.8792 2.90862L12.8572 9.93066V0Z" fill="url(#paint0_linear_0_75)"/>
     </g>

@@ -49,3 +49,5 @@ Route::post('logout', [SessionsController::class, 'logout'])->middleware('auth')
 Route::get('admin/dashboard', [AdminController::class, 'index'])->middleware('admin');
 Route::get('admin/dashboard/projects', [AdminController::class, 'projects'])->middleware('admin');
 Route::delete('admin/dashboard/projects/{project:name}', [AdminController::class, 'destroy'])->middleware('admin');
+Route::get('admin/dashboard/projects/create', [AdminController::class, 'create'])->middleware('admin');
+Route::post('admin/dashboard/projects', [AdminController::class, 'store'])->middleware('admin');

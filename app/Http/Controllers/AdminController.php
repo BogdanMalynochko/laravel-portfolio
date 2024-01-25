@@ -8,9 +8,11 @@ use App\Models\Skill;
 
 class AdminController extends Controller
 {
+    // Projects
+
     public function index()
     {
-        return view('admin.index', [
+        return view('admin.projects.index', [
             'projects' => Project::all(),
             'skills' => Skill::all(),
         ]);
@@ -18,9 +20,27 @@ class AdminController extends Controller
 
     public function projects()
     {
-        return view('admin.projects', [
+        return view('admin.projects.projects', [
             'projects' => Project::all(),
         ]);
+    }
+
+    public function create()
+    {
+        return view('admin.projects.create');
+    }
+
+    public function store()
+    {
+        $attributes = request()->validate([
+            'name' => 'required|unique:projects,name',
+            'description' => 'required',
+            'link' => 'required|unique:projects,link',
+            'skill' => 'required|exists:skills,id',
+        ]);
+
+        Project::create($attributes);
+        return redirect('/admin/dashboard/projects')->with('success', 'Project created successfully');
     }
 
     public function destroy(Project $project) 
@@ -29,4 +49,6 @@ class AdminController extends Controller
 
         return redirect('/admin/dashboard/projects/')->with('success', 'Project Deleted!');
     }
+
+    // Skills
 }
