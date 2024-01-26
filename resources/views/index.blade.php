@@ -36,34 +36,34 @@
         </div>
     </section>
 
-    <section class="projects py-8">
-        <div class="container">
-            <x-heading>Some Featured projects</x-heading>
-            @if ($projects->count())
-                <div class="pt-10 flex flex-col gap-10">
-                    @foreach ($projects as $index => $project)
-                        @if ($index < 3)
-                            <x-project-card :index="$index" :project="$project"/>
-                        @endif
-                    @endforeach
-                </div>
-                <x-button link="/projects" class="mx-auto mt-6">Show All Projects</x-button>
-            @endif
-        </div>
-    </section>
+    @if ($projects->count())
+        <section class="projects py-8">
+            <div class="container">
+                <x-heading>Some Featured projects</x-heading>
+                    <div class="pt-10 flex flex-col gap-10">
+                        @foreach ($projects as $index => $project)
+                            @if ($index < 3)
+                                <x-project-card :index="$index" :project="$project"/>
+                            @endif
+                        @endforeach
+                    </div>
+                    <x-button link="/projects" class="mx-auto mt-6">Show All Projects</x-button>
+            </div>
+        </section>
+    @endif
 
-    <section class="testimonials py-8">
-        <div class="container">
-            <x-heading>Client testimonials</x-heading>
-            @if ($testimonials -> count())
+    @if ($testimonials->count())
+        <section class="testimonials py-8">
+            <div class="container">
+                <x-heading>Client testimonials</x-heading>
                 <div class="grid grid-cols-2 gap-16">
                     @foreach ($testimonials as $testimonial)
                         <x-testimonial-card :testimonial="$testimonial"/>
                     @endforeach
                 </div>
-            @endif
-        </div>
-    </section>
+            </div>
+        </section>
+    @endif
 
     <section class="ideas pt-36 pb-24">
         <div class="container flex items-center justify-between">

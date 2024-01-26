@@ -8,9 +8,12 @@
         </div>
         <h2 class="bold"><a class="project-link" href="{{ $project->link }}">{{ $project->name }}</a></h2>
         <div class="flex flex-col">
-            @foreach ($project->skills as $skill)
-                <h3 class="white">Skills I used in this project: <span class="underline">{{ $skill->name }}</span></h3>
-            @endforeach
+            <h3 class="white">
+                Skills I used in this project: 
+                @foreach ($project->skills as $skill)
+                    <span class="underline">{{ $skill->name }}</span>
+                @endforeach
+            </h3>
         </div>
     </div>
 </div>
